@@ -1,4 +1,4 @@
-# SCC COSMOS-SENS docs
+# SCC COSMOS-SENS Migration process
 Documentation about COSMOS-SENS for users at the SCC.
 
 
