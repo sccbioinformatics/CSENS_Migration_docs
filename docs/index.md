@@ -53,7 +53,7 @@ In addition to a small amount of space in `/home/`
 
 The only way to access COSMOS-SENS is via a web browser which you should point to:
 
-[https://sens05.lunarc.lu.se](https://sens05.lunarc.lu.se)
+[https://sens01.lunarc.lu.se](https://sens01.lunarc.lu.se)
 
 Login with your **LUNARC** credentials and then using using two-factor authentication using Pocket Pass. You will be presented with an option as to which GNOME desktop you would like to use. Pick the one you prefer. 
 
