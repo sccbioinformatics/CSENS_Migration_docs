@@ -104,4 +104,4 @@ Where the `MyDataFolder` folder will be copied the mounted folder and will be in
 LSENS2 will be kept in read-only mode for sometime, so if you forget something you can go back and get it. We will let you know when it will be decommissioned.
 
 ## Missing software
-COSMOS-SENS uses a different CPU architecture to LSENS, so some software will definetely be mssing. If you need something installed please contact Shamit so a request can be put in.
+COSMOS-SENS uses a different CPU architecture to LSENS, so some software will definitely be mssing. If you need something installed please contact Shamit so a request can be put in.
