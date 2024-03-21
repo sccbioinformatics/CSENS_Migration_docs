@@ -20,8 +20,8 @@ We currently have three file stores on LS2 where you keep your data/files:
 On COSMOS-SENS there will only be two:
 
 ```shell
-/projects/raw/
-/projects/processed/
+/scale/gr01/shared/projects/raw/
+/scale/gr01/shared/projects/processed/
 ```
 In addition to a small amount of space in `/home/`
 
