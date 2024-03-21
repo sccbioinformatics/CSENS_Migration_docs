@@ -76,13 +76,13 @@ You will need to install `sshfs` if you haven't already. For Linux machines the 
 
 To mount a folder (Linux/macOS) do the following:
 
-1) **Login to COSMOS-SENS** and make a folder. For example `mkdir /processed/<userid>/fs1_lsens`
+1) **Login to COSMOS-SENS** and make a folder. For example `mkdir /scale/gr01/shared/processed/<userid>/fs1_lsens`
 
 2) Login to LSENS and make a folder that you will mount to. For example `/home/<userid>/ToCSENS`
 
 3) To mount the folder, **on LSENS** do:
 
-`sshfs <userID>@cs-diode:/processed/<userid>/fs1_lsens  /home/<userid>/ToCSENS`
+`sshfs <userID>@cs-diode:/scale/gr01/shared/processed/<userid>/fs1_lsens  /home/<userid>/ToCSENS`
 
 4) **On LS2** you can now copy files into `ToCSENS` where they will be available in COSMOS-SENS. for example:
 
@@ -96,7 +96,7 @@ Where the `MyDataFolder` folder will be copied the mounted folder and will be in
 
 **Just to be clear, all files in this mounted folder are located on COSMOS-SENS**. When you unmount `ToCSENS` that folder will be empty again. 
 
-6) Now that you have your files on COSMOS-SENS, you should arrange it so your raw data goes to `/raw` and the rest on `/processed/`, and your scripts to `/home`.
+6) Now that you have your files on COSMOS-SENS, you should arrange it so your raw data goes to `/scale/gr01/shared/raw` and the rest on `/scale/gr01/shared/processed/`, and your scripts to `/home`.
 
 **From this point onwards you should only work on COSMOS-SENS**.
 
