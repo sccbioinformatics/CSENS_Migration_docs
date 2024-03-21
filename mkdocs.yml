@@ -1,4 +1,4 @@
-site_name: SCC COSMOS-SENS Documentation
+site_name: SCC COSMOS-SENS Migration
 nav:
     - Home: index.md
 theme: readthedocs
