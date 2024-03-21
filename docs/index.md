@@ -6,7 +6,7 @@ We have all been using LSENS2 for the past few years, and we will now migrate to
 COSMOS-SENS is open to all at Lund University, **the only thing that will be exclusive to us is the storage we use.**
 
 ## Folder structure
-**The migration will NOT be done automatically by LUNARC copying all files from LS2 to CSENS**. Each user will have to take respondibility for copoing their own files to CSENS.
+**The migration will NOT be done automatically by LUNARC copying all files from LS2 to CSENS**. Each user will have to take responsibility for copying their own files to CSENS.
 
 We currently have three file stores on LS2 where you keep your data/files:
 
@@ -34,7 +34,7 @@ In addition to a small amount of space in `/home/`
 
 2) Make sure you can still access LSENS2 if it has been a while.
 
-3) It make sense that you do a cleanup of your files on LSENS2 before you begin copying over.  
+<!---3) It make sense that you do a cleanup of your files on LSENS2 before you begin copying over.  --->
 
 ## The basic procedure
 
