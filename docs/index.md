@@ -75,9 +75,9 @@ Be careful about this as you transfer your files.
 
 Copying data to COSMOS-SENS can **only** be done via sftp via the diode (**cs-diode.lunarc.lu.se**), but this is made easier by mounting a COSMOS-SENS folder to folder on the local machine you are working on. Files can then be copied/moved to this mounted folder which will then become available on COSMOS-SENS.
 
-You will need to install `sshfs` if you haven't already. For Linux machines the `sshfs` package can be installed via your package manager, and for mac users there is [macFUSE](https://osxfuse.github.io/). Windows users will have to transfer files using WinSCP with the 2FA option or Filezilla with the interactive login option.
+<!---You will need to install `sshfs` if you haven't already. For Linux machines the `sshfs` package can be installed via your package manager, and for mac users there is [macFUSE](https://osxfuse.github.io/). Windows users will have to transfer files using WinSCP with the 2FA option or Filezilla with the interactive login option.--->
 
-To mount a folder (Linux/macOS) do the following:
+To mount a folder in LS2 do the following:
 
 1) **Login to COSMOS-SENS** and make a folder. For example `mkdir /scale/gr01/shared/processed/<userid>/fs1_lsens`
 
