@@ -1,7 +1,7 @@
 # Migration instructions from LSENS2 to COSMOS-SENS for those at the Lund Stem Cell Center.
 
 ## WARNING!!!
-These finer details contained in this document are still being worked on and will likely change a little. You should read this so you are broadly familiar with what will happen next and generally what you should be doing.
+The finer details contained in this document are still being worked on and will likely change a little. You should read this so you are broadly familiar with what will happen next and generally what you should be doing.
 
 ## Introduction
 We have all been using LSENS2 for the past few years, and we will now migrate to COSMOS-SENS. This system is different from what we have been using before where we had our own front-end, storage, and compute nodes.
