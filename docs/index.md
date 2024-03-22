@@ -77,17 +77,17 @@ Copying data to COSMOS-SENS can **only** be done via sftp via the diode (**cs-di
 
 <!---You will need to install `sshfs` if you haven't already. For Linux machines the `sshfs` package can be installed via your package manager, and for mac users there is [macFUSE](https://osxfuse.github.io/). Windows users will have to transfer files using WinSCP with the 2FA option or Filezilla with the interactive login option.--->
 
-To mount a folder in LS2 do the following:
+To mount a folder in LSENS2 do the following:
 
 1) **Login to COSMOS-SENS** and make a folder. For example `mkdir /scale/gr01/shared/processed/<userid>/fs1_lsens`
 
-2) Login to LSENS and make a folder that you will mount to. For example `/home/<userid>/ToCSENS`
+2) **Login to LSENS** and make a folder that you will mount to. For example `/home/<userid>/ToCSENS`
 
 3) To mount the folder, **on LSENS** do:
 
 `sshfs <userID>@cs-diode:/scale/gr01/shared/processed/<userid>/fs1_lsens  /home/<userid>/ToCSENS`
 
-4) **On LS2** you can now copy files into `ToCSENS` where they will be available in COSMOS-SENS. for example:
+4) **On LSENS2** you can now copy files into `ToCSENS` where they will be available in COSMOS-SENS. for example:
 
 `cp -R /projects/fs1/<userid>/MyDataFolder /home/<userid>/ToCSENS`
 
