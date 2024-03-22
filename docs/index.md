@@ -9,7 +9,7 @@ We have all been using LSENS2 for the past few years, and we will now migrate to
 COSMOS-SENS is open to all at Lund University, **the only thing that will be exclusive to us is the storage we use.**
 
 ## Folder structure
-**The migration will NOT be done automatically by LUNARC copying all files from LSENS2 to CSENS**. Each user will have to take responsibility for copying their own files to CSENS.
+**The migration will NOT be done automatically by LUNARC copying all files from LSENS2 to COSMOS-SENS**. Each user will have to take responsibility for copying their own files to COSMOS-SENS.
 
 We currently have three file stores on LSENS2 where you keep your data/files:
 
@@ -41,9 +41,9 @@ In addition to a small amount of space in `/home/`
 
 ## The basic procedure
 
-<!--- 1) LS2 will be put into **read-only** mode (date to be confirmed) so no further work can be done.--->
+<!--- 1) LSENS will be put into **read-only** mode (date to be confirmed) so no further work can be done.--->
 
-1) Each person will be required to copy their own files from `/home`,`/fs1`,`/fs3`,and `/fs5` on LS2 to the appropriate destination folder on COSMOS-SENS.
+1) Each person will be required to copy their own files from `/home`,`/fs1`,`/fs3`,and `/fs5` on LSENS to the appropriate destination folder on COSMOS-SENS.
 
 2) After people are done copying, `/fs1`,`/fs3`,and `/fs5` will stay in `read-only` mode, and `fs2` will be redeployed to backup `/raw` on COSMOS-SENS.
 
@@ -52,7 +52,7 @@ In addition to a small amount of space in `/home/`
 
 ## Connecting to COSMOS-SENS
 
-**Do not forget to activate your VPN if you usually use one to connect to LS2**
+**Do not forget to activate your VPN if you usually use one to connect to LSENS**
 
 The only way to access COSMOS-SENS is via a web browser which you should point to:
 
@@ -81,23 +81,23 @@ To mount a folder in LSENS2 do the following:
 
 1) **Login to COSMOS-SENS** and make a folder. For example `mkdir /scale/gr01/shared/processed/<userid>/fs1_lsens`
 
-2) **Login to LSENS** and make a folder that you will mount to. For example `/home/<userid>/ToCSENS`
+2) **Login to LSENS** and make a folder that you will mount to. For example `/home/<userid>/ToCOSMOS-SENS`
 
 3) To mount the folder, **on LSENS** do:
 
-`sshfs <userID>@cs-diode:/scale/gr01/shared/processed/<userid>/fs1_lsens  /home/<userid>/ToCSENS`
+`sshfs <userID>@cs-diode:/scale/gr01/shared/processed/<userid>/fs1_lsens  /home/<userid>/ToCOSMOS-SENS`
 
-4) **On LSENS2** you can now copy files into `ToCSENS` where they will be available in COSMOS-SENS. for example:
+4) **On LSENS2** you can now copy files into `ToCOSMOS-SENS` where they will be available in COSMOS-SENS. for example:
 
-`cp -R /projects/fs1/<userid>/MyDataFolder /home/<userid>/ToCSENS`
+`cp -R /projects/fs1/<userid>/MyDataFolder /home/<userid>/ToCOSMOS-SENS`
 
 Where the `MyDataFolder` folder will be copied the mounted folder and will be in `/processed/<userid>/fs1_lsens`
 
-5) When you are done copying to the mounted folder, you can unmount the folder and close the connection to CSENS by doing **on LSENS**
+5) When you are done copying to the mounted folder, you can unmount the folder and close the connection to COSMOS-SENS by doing **on LSENS**
 
-`fusermount -u ToCSENS`
+`fusermount -u ToCOSMOS-SENS`
 
-**Just to be clear, all files in this mounted folder are located on COSMOS-SENS**. When you unmount `ToCSENS` that folder will be empty again. 
+**Just to be clear, all files in this mounted folder are located on COSMOS-SENS**. When you unmount `ToCOSMOS-SENS` that folder will be empty again. 
 
 6) Now that you have your files on COSMOS-SENS, you should arrange it so your raw data goes to `/scale/gr01/shared/raw` and the rest on `/scale/gr01/shared/processed/`, and your scripts to `/home`.
 
