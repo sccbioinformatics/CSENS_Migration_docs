@@ -23,12 +23,11 @@ We currently have three file stores on LSENS2 where you keep your data/files:
 On COSMOS-SENS there will only be two:
 
 ```shell
-/scale/gr01/shared/projects/raw/<userid>
-/scale/gr01/shared/projects/processed/<userid>
+/home/backup
+/home
 ```
-In addition to a small amount of space in `/home/`
 
-`/raw` is backed up, `/processed` is **not**. This means all your raw data (fastq etc) should be kept in `/raw`, and all of your intermediate files (BAM etc) should be sent to `/processed`. Your `/home` is also backed up, so your scripts should be kept here. This idea is that if you lose an intermediate file, you should be able to regenerate it from your raw data and your scripts in `/home`.
+`/home/backup` is backed up, anything outside is **not**. This means all your raw data (fastq etc) should be kept in `backup`, and all of your intermediate files (BAM etc) should be sent outside. Ideall your scripts should be kept in `/home/backup`. This idea is that if you lose an intermediate file, you should be able to regenerate it from your raw data and your scripts.
 
 **The backup is only for technical issues, it is not intended for file recovery if you do something wrong.** We do not take daily/weekly snapshots. At the same time, the loss of files due to failures on an IBM spectrum Scale is very very low, as to be almost non-existant.
 
