@@ -84,6 +84,8 @@ To mount a folder in LSENS2 do the following:
 
 3) To mount the folder, **on LSENS** do:
 
+**NOTE. Have your pocket pass ready. If you are too slow entering it the login will fail.** No idea why, thats just the way it is.
+
 `sshfs <userID>@cs-diode:/home/<userid>/fs1_lsens  /home/<userid>/ToCOSMOS-SENS`
 
 4) **On LSENS2** you can now copy files into `ToCOSMOS-SENS` where they will be available in COSMOS-SENS. for example using copy:
