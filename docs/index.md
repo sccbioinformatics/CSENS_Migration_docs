@@ -61,14 +61,14 @@ Login with your **LUNARC** credentials and then using using two-factor authentic
 
 **If you are asked to change you password, do not do it!** Abort, and instead change your password at:
 
-[https://phenix3.lunarc.lu.se/ssaml/authenticate/pss-confirmemail-otp](https://phenix3.lunarc.lu.se/ssaml/authenticate/pss-confirmemail-otp)
+[https://phenix3.lunarc.lu.se/pss](https://phenix3.lunarc.lu.se/pss)
 
 **When you have done this your password for all LUNARC servers will changed to this now one, including LSENS2.**
 
 ## Beware!
 If you have the same folder name on `fs1` and  `fs5` for example, they should **not** be copied to the same destination folder! You will end up with a merge that will become a complete mess. Instead they should be sent to different folders and then manually restructured/merged/curated afterward.
 
-Be careful about this as you transfer your files.
+**Be careful about this as you transfer your files.**
 
 ## Transferring data to COSMOS-SENS from LSENS2
 
@@ -78,17 +78,21 @@ Copying data to COSMOS-SENS can **only** be done via sftp via the diode (**cs-di
 
 To mount a folder in LSENS2 do the following:
 
-1) **Login to COSMOS-SENS** and make a folder. For example `mkdir /scale/gr01/shared/processed/<userid>/fs1_lsens`
+1) **Login to COSMOS-SENS** and make a folder. For example `mkdir /home/<userid>/fs1_lsens`
 
 2) **Login to LSENS** and make a folder that you will mount to. For example `/home/<userid>/ToCOSMOS-SENS`
 
 3) To mount the folder, **on LSENS** do:
 
-`sshfs <userID>@cs-diode:/scale/gr01/shared/processed/<userid>/fs1_lsens  /home/<userid>/ToCOSMOS-SENS`
+`sshfs <userID>@cs-diode:/home/<userid>/fs1_lsens  /home/<userid>/ToCOSMOS-SENS`
 
-4) **On LSENS2** you can now copy files into `ToCOSMOS-SENS` where they will be available in COSMOS-SENS. for example:
+4) **On LSENS2** you can now copy files into `ToCOSMOS-SENS` where they will be available in COSMOS-SENS. for example using copy:
 
 `cp -R /projects/fs1/<userid>/MyDataFolder /home/<userid>/ToCOSMOS-SENS`
+
+Using rsync (recommended as it will preserve the modified dates of the files)
+
+`rsync -azvht /projects/fs1/<userid>/MyDataFolder /home/<userid>/ToCOSMOS-SENS`
 
 Where the `MyDataFolder` folder will be copied the mounted folder and will be in `/processed/<userid>/fs1_lsens`
 
