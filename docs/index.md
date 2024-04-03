@@ -98,7 +98,7 @@ Where the `MyDataFolder` folder will be copied the mounted folder and will be in
 
 **Just to be clear, all files in this mounted folder are located on COSMOS-SENS**. When you unmount `ToCOSMOS-SENS` that folder will be empty again. 
 
-6) Now that you have your files on COSMOS-SENS, you should arrange it so your raw data goes to `/scale/gr01/shared/raw` and the rest on `/scale/gr01/shared/processed/`, and your scripts to `/home`.
+6) Now that you have your files on COSMOS-SENS, you should arrange it so your raw data goes to `home/<userid>/backup` and the rest outside of this your scripts in `home/<userid>/`.
 
 **From this point onwards you should only work on COSMOS-SENS**.
 
