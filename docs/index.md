@@ -80,23 +80,24 @@ To mount a folder in LSENS2 do the following:
 
 1) **Login to COSMOS-SENS** and make a folder. For example `mkdir /home/<userid>/fs1_lsens`
 
-2) **Login to LSENS** and make a folder that you will mount to. For example `/home/<userid>/ToCOSMOS-SENS`
+2) **Login to LSENS2** and make a folder that you will mount to. For example `/home/<userid>/ToCOSMOS-SENS`
 
-3) To mount the folder, **on LSENS** do:
+3) To mount the folder, **on LSENS2** do:
 
 **NOTE. Have your pocket pass ready. If you are too slow entering it the login will fail.** No idea why, thats just the way it is.
 
 `sshfs <userID>@cs-diode:/home/<userid>/fs1_lsens  /home/<userid>/ToCOSMOS-SENS`
 
-4) **On LSENS2** you can now copy files into `ToCOSMOS-SENS` where they will be available in COSMOS-SENS. for example using copy:
-
-`cp -R /projects/fs1/<userid>/MyDataFolder /home/<userid>/ToCOSMOS-SENS`
-
-Using rsync (recommended as it will preserve the modified dates of the files)
+4) **On LSENS2** you can now copy files into `ToCOSMOS-SENS` where they will be available in COSMOS-SENS. for example using rsync. **Using rsync (recommended as it will preserve the modified dates of the files)**
 
 `rsync -azvht /projects/fs1/<userid>/MyDataFolder /home/<userid>/ToCOSMOS-SENS`
 
 Where the `MyDataFolder` folder will be copied the mounted folder and will be in `/processed/<userid>/fs1_lsens`
+
+Or copy, but don't use this for large amounts of data:
+
+`cp -R /projects/fs1/<userid>/MyDataFolder /home/<userid>/ToCOSMOS-SENS`
+
 
 5) When you are done copying to the mounted folder, you can unmount the folder and close the connection to COSMOS-SENS by doing **on LSENS**
 
